@@ -5,23 +5,19 @@ public class Main {
 		
 		//istaniamo alcuni animali
 		//cani
-		Dog poyo = new Dog();
-		Dog dog2 = new Dog();
+		Dog dog1 = new Dog();
 		//passerotti
 		Sparrow sparrow1 = new Sparrow();
-		Sparrow sparrow2 = new Sparrow();
-		Sparrow sparrow3 = new Sparrow();
 		//aquile
 		Eagle eagle = new Eagle();
-		Eagle eagle2 = new Eagle();
 		//delfini
 		Dolphin willy = new Dolphin();
 		
 		//test metodi
 		System.out.println("Dog");
-		dog2.sleep();
-		dog2.eat();
-		dog2.verse();
+		dog1.sleep();
+		dog1.eat();
+		dog1.verse();
 		System.out.println("--------------");
 		
 		System.out.println("Sparrow");
@@ -42,5 +38,19 @@ public class Main {
 		willy.verse();
 		System.out.println("--------------");
 		
+		
+		//***********************
+		faiVolare(sparrow1);
+		faiVolare(eagle);
+		faiNuotare(willy);
+	}
+	
+	//-----------------------------------------------------------------------
+	static void faiVolare(IVolante animale) {
+		animale.fly();
+	}
+	
+	static void faiNuotare(INuotante animale) {
+		animale.swimming();
 	}
 }
