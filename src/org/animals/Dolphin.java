@@ -4,11 +4,6 @@ package org.animals;
 public class Dolphin extends Animal implements INuotante{
 
 	@Override
-	public void sleep() {
-		System.out.println("Gluuuzzzz ..........");
-	}
-
-	@Override
 	public void verse() {
 		System.out.println("Iiiiihh IIiiihhh");
 	}

@@ -4,7 +4,9 @@ package org.animals;
 public abstract class Animal {
 	
 	// metdo astratto
-		public abstract void sleep();
+		public void sleep() {
+			System.out.println("ZZzzzzzz Zzzzzzz");
+		};
 		public abstract void verse();
 		public abstract void eat();
 }

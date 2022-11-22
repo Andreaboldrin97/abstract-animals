@@ -4,11 +4,6 @@ package org.animals;
 public class Eagle extends Animal implements IVolante{
 
 	@Override
-	public void sleep() {
-		System.out.println("Zzzz Zzzzzz Zzzzzzz");
-	}
-
-	@Override
 	public void verse() {
 		System.out.println("Aaahh Aaahh");
 	}

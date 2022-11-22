@@ -70,27 +70,24 @@ public class Main {
 			int yearIncome =  p.getYearIncome();
 			
 			totalSalaries += yearIncome;
-			averageSalaries = totalSalaries / peopleCompany.length;
+			
 			
 			//BONUS
-			//condizione per vedere di che tipo di classe fa parte
-			if(p.getClass().getSimpleName().equals("Employee")) {
-				
-				//condizione di minoranza
-				if(minEmpYearIncome > yearIncome) {
+			//condizione per vedere di che tipo di classe fa parte //condizione di minoranza
+			if(( p instanceof Employee )  && (minEmpYearIncome > yearIncome)) {
 					// associo il valore ottenuto e salvo la persona con quel valore
 					minEmpYearIncome =  yearIncome;
 					minYearIncomeEmpPerson = p;
-				}
+				
 		
-			}else{
-				//condizione di maggioranza Boss
-				if(maxBossYearIncome < yearIncome) {
+			}
+			//condizione per vedere di che tipo di classe fa parte //condizione di maggioranza Boss
+			if(( p instanceof Boss )  && (maxBossYearIncome < yearIncome)) {
 					// associo il valore ottenuto e salvo la persona con quel valore
 					maxBossYearIncome =  yearIncome;
 					maxYearIncomeBossPerson = p;
-				}
 			}
+			//--------------------------------------------
 			
 			//condizione di maggioranza
 			if(maxYearIncome < yearIncome) {
@@ -106,6 +103,7 @@ public class Main {
 			}
 		}
 		
+		averageSalaries = totalSalaries / peopleCompany.length;
 		//stampiamo la persona con incasso annuale maggiore e minore
 		System.out.println("------------------------------------");
 		System.out.println("Totale Stipendi : " + totalSalaries);

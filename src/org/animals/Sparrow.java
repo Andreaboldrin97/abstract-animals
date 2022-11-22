@@ -4,11 +4,6 @@ package org.animals;
 public class Sparrow extends Animal implements IVolante {
 
 	@Override
-	public void sleep() {
-		System.out.println("Zzzz Zzzzzz Zzzzzzz");
-	}
-
-	@Override
 	public void verse() {
 		System.out.println("Cip Cip");
 	}
