@@ -1,7 +1,7 @@
 package org.animals;
 
 //la classe Dolphin estende la classe astratta Animal
-public class Dolphin extends Animal{
+public class Dolphin extends Animal implements INuotante{
 
 	@Override
 	public void sleep() {
@@ -16,6 +16,11 @@ public class Dolphin extends Animal{
 	@Override
 	public void eat() {
 		System.out.println("Pesce, crostacei e calamari.");
+	}
+
+	@Override
+	public void swimming() {
+		System.out.println("Sto nuotando!!!");
 	}
 
 }

@@ -1,7 +1,7 @@
 package org.animals;
 
 //la classe Sparrow estende la classe astratta Animal
-public class Sparrow extends Animal {
+public class Sparrow extends Animal implements IVolante {
 
 	@Override
 	public void sleep() {
@@ -18,4 +18,8 @@ public class Sparrow extends Animal {
 		System.out.println("il passerotto si nutre principalmente di cibo morbido ed insetti ");
 	}
 
+	@Override
+	public void fly() {
+		System.out.println("Sto volando!!!");
+	}
 }
