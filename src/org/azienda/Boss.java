@@ -35,7 +35,7 @@ public class Boss extends Person {
 		// dichiaro il metodo
 		public int getYearIncome() {
 			
-			return  salary * 12 + bonus;
+			return  getSalary() * 12 + getBonus();
 		}
 		
 		@Override
