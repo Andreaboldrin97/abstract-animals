@@ -1,5 +1,21 @@
 package org.animals;
 
-public class Eagle {
+//la classe Eagle estende la classe astratta Animal
+public class Eagle extends Animal{
+
+	@Override
+	public void sleep() {
+		System.out.println("Zzzz Zzzzzz Zzzzzzz");
+	}
+
+	@Override
+	public void verse() {
+		System.out.println("Aaahh Aaahh");
+	}
+
+	@Override
+	public void eat() {
+		System.out.println("L'aquila si nutre per il 70-80% di mammiferi");
+	}
 
 }
