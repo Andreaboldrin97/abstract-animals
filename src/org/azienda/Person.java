@@ -12,17 +12,13 @@ public abstract class Person {
 	LocalDate dateOfBirth;
 	String companyCode; //valore casuale di 5 cifre
 	
-	// genero dei numeri casuali
-	Random rand = new Random();
-	
 	// creo il costruttore
 	public Person(String name, String surname, LocalDate dateOfBirth) {
 		// assegnazione delle variabili
 		setName(name);
 		setSurname(surname);
 		setDateOfBirth(dateOfBirth);
-		// generazione casuale di un intero poi trasformato in stringa 
-		companyCode = Integer.toString(rand.nextInt(10000 , 99999));
+		generateCompanyCode();
 	}
 	
 	// get e set
@@ -52,6 +48,13 @@ public abstract class Person {
 	}
 	public void setCompanyCode(String companyCode) {
 		this.companyCode = companyCode;
+	}
+	private void generateCompanyCode() {
+	// genero dei numeri casuali
+		Random rand = new Random();
+		// generazione casuale di un intero poi trasformato in stringa 
+		String companyCode = Integer.toString(rand.nextInt(10000 , 99999));
+		setCompanyCode(companyCode);
 	}
 	
 	// restituisce "nome cognome (codice aziendale)"
